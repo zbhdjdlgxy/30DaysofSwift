@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayCell" rowHeight="68" id="nht-l7-hyv" customClass="PlayCell" customModule="project_2_playVideo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nht-l7-hyv" id="Lbq-pr-LHq">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cT4-b5-sVf">
+                        <rect key="frame" x="8" y="8" width="339" height="51"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6i-CA-cd1">
+                        <rect key="frame" x="162" y="16" width="30" height="36"/>
+                        <connections>
+                            <action selector="play:" destination="nht-l7-hyv" eventType="touchUpInside" id="Bzb-oy-pMK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="centerY" secondItem="Lbq-pr-LHq" secondAttribute="centerY" id="0d0-fh-0hU"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="top" secondItem="Lbq-pr-LHq" secondAttribute="topMargin" id="0qd-vM-qyA"/>
+                    <constraint firstItem="l6i-CA-cd1" firstAttribute="top" secondItem="Lbq-pr-LHq" secondAttribute="topMargin" constant="8" id="4z9-eV-CAf"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="centerX" secondItem="l6i-CA-cd1" secondAttribute="centerX" id="Dg5-ZC-s3z"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="bottom" secondItem="Lbq-pr-LHq" secondAttribute="bottomMargin" id="J4T-LG-JLj"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="trailing" secondItem="Lbq-pr-LHq" secondAttribute="trailingMargin" id="JLr-yO-PZQ"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="centerY" secondItem="Lbq-pr-LHq" secondAttribute="centerY" id="L8g-q8-5TE"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="leading" secondItem="Lbq-pr-LHq" secondAttribute="leadingMargin" id="O6f-w4-wrW"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="top" secondItem="Lbq-pr-LHq" secondAttribute="topMargin" constant="-50" id="XTq-fI-xTI"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="leading" secondItem="Lbq-pr-LHq" secondAttribute="leadingMargin" constant="21" id="oH0-xb-cBI"/>
+                    <constraint firstItem="cT4-b5-sVf" firstAttribute="centerY" secondItem="l6i-CA-cd1" secondAttribute="centerY" id="wnI-gQ-zph"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cT4-b5-sVf" secondAttribute="trailing" constant="43" id="ymM-O6-4kF"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0d0-fh-0hU"/>
+                        <exclude reference="L8g-q8-5TE"/>
+                        <exclude reference="XTq-fI-xTI"/>
+                        <exclude reference="oH0-xb-cBI"/>
+                        <exclude reference="ymM-O6-4kF"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="playBtn" destination="l6i-CA-cd1" id="AbD-9O-pQx"/>
+                <outlet property="videoPic" destination="cT4-b5-sVf" id="w6g-z9-o8u"/>
+            </connections>
+            <point key="canvasLocation" x="315.5" y="-53"/>
+        </tableViewCell>
+    </objects>
+</document>
