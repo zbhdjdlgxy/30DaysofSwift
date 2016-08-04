@@ -10,9 +10,9 @@ import UIKit
 
 class MainCtl: UIViewController {
 
-    final var listView : UIStackView = UIStackView()
     static let screenW : CGFloat = UIScreen.mainScreen().bounds.width
     static let screenH : CGFloat = UIScreen.mainScreen().bounds.height
+    let listView : UIStackView = UIStackView()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
@@ -20,12 +20,13 @@ class MainCtl: UIViewController {
     
     override func loadView() {
         
-        
         self.view = UIView.init(frame: CGRectMake(0, 0, MainCtl.screenW, MainCtl.screenH))
+        
         listView.frame = CGRectMake((MainCtl.screenW - 301)/2, 200, 301, 400)
         listView.axis = .Vertical
         listView.alignment = .Fill
         listView.distribution = .FillEqually
+        
         let addBtn : UIButton = UIButton.init(type: .Custom)
         addBtn.backgroundColor = UIColor.grayColor()
         addBtn.frame = CGRectMake(20, 100, 100, 38)
@@ -62,6 +63,4 @@ class MainCtl: UIViewController {
         }
         
     }
-
-
 }

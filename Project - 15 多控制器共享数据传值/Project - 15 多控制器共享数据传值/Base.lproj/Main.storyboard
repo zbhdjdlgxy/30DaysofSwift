@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dx5-AN-lYq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--界面B-->
+        <scene sceneID="MFJ-C6-5ur">
+            <objects>
+                <viewController id="EoH-jV-gIG" customClass="BBVC" customModule="Project___15_多控制器共享数据传值" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GAU-FA-i8f"/>
+                        <viewControllerLayoutGuide type="bottom" id="LvC-Yh-2LO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R4H-FK-ufb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aQ-7H-KpM">
+                                <rect key="frame" x="159" y="183" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EoH-jV-gIG" id="RJg-Io-l59"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgP-WG-MWT">
+                                <rect key="frame" x="159" y="254" width="97" height="30"/>
+                                <state key="normal" title="jump"/>
+                                <connections>
+                                    <segue destination="OEr-Ow-wkI" kind="presentation" id="fQc-P3-EtO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="界面B" id="pzG-9U-Z40"/>
+                    <connections>
+                        <outlet property="moneyTF" destination="8aQ-7H-KpM" id="AFe-y8-fRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tr-gN-nsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="597"/>
+        </scene>
+        <!--CCVC-->
+        <scene sceneID="Gor-0F-vlB">
+            <objects>
+                <viewController id="OEr-Ow-wkI" customClass="CCVC" customModule="Project___15_多控制器共享数据传值" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EmT-mW-9FZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wzc-YI-PX8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c85-oE-twc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="muX-l5-EB3">
+                                <rect key="frame" x="159" y="226" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYJ-Y0-f7U">
+                                <rect key="frame" x="159" y="285" width="91" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backAction:" destination="OEr-Ow-wkI" eventType="touchUpInside" id="tkI-kS-s6E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="moneyStr" destination="muX-l5-EB3" id="wia-4Z-Lkj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfn-r8-2x5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853" y="659"/>
+        </scene>
+        <!--界面A-->
+        <scene sceneID="hQ9-cb-qYV">
+            <objects>
+                <viewController id="xuv-3R-H1k" customClass="AAVC" customModule="Project___15_多控制器共享数据传值" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tGb-uq-8yK"/>
+                        <viewControllerLayoutGuide type="bottom" id="JV3-EM-nle"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lzA-2K-HUP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-pb-8PZ">
+                                <rect key="frame" x="159" y="209" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xuv-3R-H1k" id="Z5v-vo-2mp"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="界面A" id="mUP-XU-RSG"/>
+                    <connections>
+                        <outlet property="moneyTF" destination="lt2-pb-8PZ" id="Gcn-YQ-boj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcG-aR-yoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="-64"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vrm-cZ-pV1">
+            <objects>
+                <tabBarController id="dx5-AN-lYq" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="484-lk-O4E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xuv-3R-H1k" kind="relationship" relationship="viewControllers" id="mdf-H4-XCj"/>
+                        <segue destination="EoH-jV-gIG" kind="relationship" relationship="viewControllers" id="BSX-qN-GaX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjh-hf-lwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="267"/>
+        </scene>
+    </scenes>
+</document>
