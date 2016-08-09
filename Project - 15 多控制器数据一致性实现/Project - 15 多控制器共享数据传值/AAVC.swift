@@ -11,7 +11,6 @@ import UIKit
 class AAVC: UIViewController,UITextFieldDelegate{
     
     var data : DataSource = DataSource.sharedInstance
-    
     @IBOutlet weak var moneyTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()

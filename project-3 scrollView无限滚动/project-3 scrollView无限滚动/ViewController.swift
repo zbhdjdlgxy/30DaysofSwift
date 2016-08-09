@@ -42,13 +42,9 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         scrollView.addSubview(blueView)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     internal func scrollViewDidEndDecelerating(scrollView: UIScrollView){
 
+        print("1 = \(scrollView.contentOffset.y)")
         let page = floor((scrollView.contentOffset.x - ViewController.screenWidth / 2) / ViewController.screenWidth) + 1;
         switch page{
         case 0:
