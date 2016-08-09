@@ -16,6 +16,11 @@
 		111B9DD91D5862790045AEDA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DD81D5862790045AEDA /* HomeTVC.swift */; };
 		111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DDE1D5862F60045AEDA /* MeTVC.swift */; };
 		111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DE11D58645C0045AEDA /* BaseNavCTL.swift */; };
+		1177B98D1D59B1C800610927 /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B98C1D59B1C800610927 /* BadgeButton.swift */; };
+		1177B9951D59CA3A00610927 /* TabBarBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9941D59CA3A00610927 /* TabBarBtn.swift */; };
+		1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9971D59D0EB00610927 /* UIColor+RGB.swift */; };
+		1177B99A1D59D0FF00610927 /* UIImage+resizeImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9991D59D0FF00610927 /* UIImage+resizeImg.swift */; };
+		1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B99B1D59DC1800610927 /* ZBTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		111B9DD81D5862790045AEDA /* HomeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		111B9DDE1D5862F60045AEDA /* MeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTVC.swift; sourceTree = "<group>"; };
 		111B9DE11D58645C0045AEDA /* BaseNavCTL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavCTL.swift; sourceTree = "<group>"; };
+		1177B98C1D59B1C800610927 /* BadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
+		1177B9941D59CA3A00610927 /* TabBarBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarBtn.swift; sourceTree = "<group>"; };
+		1177B9971D59D0EB00610927 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		1177B9991D59D0FF00610927 /* UIImage+resizeImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+resizeImg.swift"; sourceTree = "<group>"; };
+		1177B99B1D59DC1800610927 /* ZBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 		110D86FD1D549AAA00B4B352 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1177B98E1D59BD6800610927 /* Catogory */,
 				1142345F1D5985E400274CC4 /* ThirdParty */,
 				110D86EE1D54878A00B4B352 /* Main.storyboard */,
 				110D86F11D54878A00B4B352 /* Assets.xcassets */,
@@ -146,6 +157,9 @@
 		111B9DD01D5860860045AEDA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1177B98C1D59B1C800610927 /* BadgeButton.swift */,
+				1177B9941D59CA3A00610927 /* TabBarBtn.swift */,
+				1177B99B1D59DC1800610927 /* ZBTabBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -228,6 +242,15 @@
 			name = ThirdParty;
 			sourceTree = "<group>";
 		};
+		1177B98E1D59BD6800610927 /* Catogory */ = {
+			isa = PBXGroup;
+			children = (
+				1177B9991D59D0FF00610927 /* UIImage+resizeImg.swift */,
+				1177B9971D59D0EB00610927 /* UIColor+RGB.swift */,
+			);
+			name = Catogory;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,8 +322,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1177B9951D59CA3A00610927 /* TabBarBtn.swift in Sources */,
+				1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */,
 				111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */,
 				110D86ED1D54878A00B4B352 /* NewFeatureViewController.swift in Sources */,
+				1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */,
+				1177B99A1D59D0FF00610927 /* UIImage+resizeImg.swift in Sources */,
+				1177B98D1D59B1C800610927 /* BadgeButton.swift in Sources */,
 				111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */,
 				110D86EB1D54878A00B4B352 /* AppDelegate.swift in Sources */,
 				111B9DD91D5862790045AEDA /* HomeTVC.swift in Sources */,
@@ -417,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/zhangbiao/Documents/ios/30DaysofSwift/Project - 16 仿网易彩票客户端/Project - 16 仿网易彩票客户端/Weibo-Prefix.pch";
 				INFOPLIST_FILE = "Project - 16 仿网易彩票客户端/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.szgyzb.Project---16---------";
@@ -428,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/zhangbiao/Documents/ios/30DaysofSwift/Project - 16 仿网易彩票客户端/Project - 16 仿网易彩票客户端/Weibo-Prefix.pch";
 				INFOPLIST_FILE = "Project - 16 仿网易彩票客户端/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.szgyzb.Project---16---------";
