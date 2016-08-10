@@ -17,6 +17,7 @@ class TabBarBtn: UIButton {
     var item : UITabBarItem = UITabBarItem(){
         
         willSet{
+            self.item = newValue
             newValue.addObserver(self, forKeyPath: "badgeValue", options: .New, context: nil)
             newValue.addObserver(self, forKeyPath: "title", options: .New, context: nil)
             newValue.addObserver(self, forKeyPath: "image", options: .New, context: nil)
@@ -64,7 +65,6 @@ class TabBarBtn: UIButton {
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        
         // 设置文字
         self.setTitle(self.item.title, forState:.Selected)
         self.setTitle(self.item.title ,forState:.Normal);
@@ -74,7 +74,12 @@ class TabBarBtn: UIButton {
         self.setImage(self.item.selectedImage,forState:.Selected)
         
         // 设置提醒数字
-        self.badgeButton.badgeValue = self.item.badgeValue!;
+        if self.item.badgeValue != nil {
+            self.badgeButton.badgeValue = self.item.badgeValue!;
+        }else{
+            self.badgeButton.badgeValue = ""
+        }
+        
         
         // 设置提醒数字的位置
         let badgeY : CGFloat = 5;
