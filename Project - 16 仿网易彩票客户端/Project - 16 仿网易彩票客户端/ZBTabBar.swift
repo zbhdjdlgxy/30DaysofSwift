@@ -10,6 +10,7 @@ import UIKit
 protocol ZBTabBarDelegate {
     
     func tabBar(tabBar : ZBTabBar, selectBtnFrom : Int,to : Int)
+    func tabBarDidPlusBtnClicked()
 }
 
 
@@ -25,10 +26,11 @@ class ZBTabBar: UIView{
         plusButton.setImage(UIImage.init(named: "tabbar_compose_icon_add"),forState:.Selected)
         plusButton.setImage(UIImage.init(named: "tabbar_compose_icon_add_highlighted"),forState:.Normal)
         plusButton.bounds = CGRectMake(0, 0, plusButton.currentBackgroundImage!.size.width, plusButton.currentBackgroundImage!.size.height)
+        plusButton.addTarget(self, action: #selector(self.plus), forControlEvents: .TouchUpInside)
         return plusButton
         
     }()
-    
+
     var selectedButton : TabBarBtn = TabBarBtn()
     var delegate: ZBTabBarDelegate?
     
@@ -69,7 +71,11 @@ class ZBTabBar: UIView{
         }
     }
     
-
+    func plus(){
+        
+        self.delegate?.tabBarDidPlusBtnClicked()
+    }
+    
     func addTabBarButtonWithItem(item : UITabBarItem){
         // 1.创建按钮
         let button : TabBarBtn = TabBarBtn()

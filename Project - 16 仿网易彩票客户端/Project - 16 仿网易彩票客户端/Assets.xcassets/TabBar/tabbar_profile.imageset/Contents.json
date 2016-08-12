@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "tabbar_profile.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tabbar_profile@2x.png",
+      "filename" : "tabbar_profile_os7@2x.png",
       "scale" : "2x"
     },
     {

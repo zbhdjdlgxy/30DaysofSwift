@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseNavCTL: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
