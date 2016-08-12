@@ -7,14 +7,12 @@
 //
 
 import UIKit
-
-class MainTabbarController: UITabBarController,ZBTabBarDelegate {
+class MainTabbarController: UITabBarController,ZBTabBarDelegate,ZBAddDelegate{
     
     var customTabBar : ZBTabBar?
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         // 删除系统自动生成的UITabBarButton
         for child in self.tabBar.subviews {
             if child is UIControl{
@@ -78,11 +76,32 @@ class MainTabbarController: UITabBarController,ZBTabBarDelegate {
         self.customTabBar!.addTabBarButtonWithItem(childVc.tabBarItem)
     }
     
+//    MARK: ZBAddDelegate
+    func zBAdd(selectIndex selectItemIndex : NSIndexPath){
+        
+        if selectItemIndex.section != 1 || selectItemIndex.row != 2 {
+            let headVC : HeadViewController = HeadViewController()
+            headVC.title = "编辑头条文章"
+            let nav : BaseNavCTL = BaseNavCTL(rootViewController: headVC)
+            self.presentViewController(nav, animated: true, completion: nil)
+        }
+        
+    }
     
 //    MARK: ZBTabBarDelegate
     func tabBar(tabBar : ZBTabBar, selectBtnFrom : Int,to : Int){
         
         self.selectedIndex = to;
     }
+    
+    func tabBarDidPlusBtnClicked(){
+        
+        let add : ZBAdd = ZBAdd.init(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        
+        add.delegate = self
+        self.view.addSubview(add)
+        self.view.bringSubviewToFront(add)
+    }
 
+    
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1103B0191D5D75BA0082D4BD /* ZBAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103B0181D5D75BA0082D4BD /* ZBAdd.swift */; };
+		1103B01D1D5D9C9C0082D4BD /* HeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103B01C1D5D9C9C0082D4BD /* HeadViewController.swift */; };
+		1103B0201D5DA7A30082D4BD /* AddSecondItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1103B01F1D5DA7A30082D4BD /* AddSecondItems.plist */; };
+		1107ABE71D5C55CE001339CA /* adIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1107ABE61D5C55CE001339CA /* adIcon.jpg */; };
+		1107ABED1D5C6D40001339CA /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107ABEC1D5C6D40001339CA /* AddItemCell.swift */; };
+		1107ABEF1D5C7299001339CA /* AddFirstItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1107ABEE1D5C7299001339CA /* AddFirstItems.plist */; };
 		1108A32B1D5ACA7D0026E6DC /* MessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A32A1D5ACA7D0026E6DC /* MessageTVC.swift */; };
 		1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A3301D5ACAB90026E6DC /* DiscoveryTVC.swift */; };
 		1108A3331D5B1C920026E6DC /* AddFriendsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A3321D5B1C920026E6DC /* AddFriendsTVC.swift */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1103B0181D5D75BA0082D4BD /* ZBAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBAdd.swift; sourceTree = "<group>"; };
+		1103B01C1D5D9C9C0082D4BD /* HeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadViewController.swift; sourceTree = "<group>"; };
+		1103B01F1D5DA7A30082D4BD /* AddSecondItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AddSecondItems.plist; sourceTree = "<group>"; };
+		1107ABE61D5C55CE001339CA /* adIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adIcon.jpg; sourceTree = "<group>"; };
+		1107ABEC1D5C6D40001339CA /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
+		1107ABEE1D5C7299001339CA /* AddFirstItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AddFirstItems.plist; sourceTree = "<group>"; };
 		1108A32A1D5ACA7D0026E6DC /* MessageTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTVC.swift; sourceTree = "<group>"; };
 		1108A3301D5ACAB90026E6DC /* DiscoveryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryTVC.swift; sourceTree = "<group>"; };
 		1108A3321D5B1C920026E6DC /* AddFriendsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsTVC.swift; sourceTree = "<group>"; };
@@ -61,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1103B0281D5DC7450082D4BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1107ABEE1D5C7299001339CA /* AddFirstItems.plist */,
+				1103B01F1D5DA7A30082D4BD /* AddSecondItems.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		1108A3251D5ACA360026E6DC /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +174,7 @@
 		110D86FC1D549AA400B4B352 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				11FAFE881D5C4CF3007D8CF9 /* Add */,
 				1108A32C1D5ACA8D0026E6DC /* Discovery */,
 				1108A3251D5ACA360026E6DC /* Message */,
 				111B9DDA1D5862C00045AEDA /* Me */,
@@ -166,6 +188,7 @@
 		110D86FD1D549AAA00B4B352 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1103B0281D5DC7450082D4BD /* Resources */,
 				1177B98E1D59BD6800610927 /* Catogory */,
 				1142345F1D5985E400274CC4 /* ThirdParty */,
 				110D86EE1D54878A00B4B352 /* Main.storyboard */,
@@ -327,6 +350,41 @@
 			name = Catogory;
 			sourceTree = "<group>";
 		};
+		11FAFE881D5C4CF3007D8CF9 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				11FAFE8B1D5C4D1D007D8CF9 /* Controllers */,
+				11FAFE8A1D5C4D17007D8CF9 /* Models */,
+				11FAFE891D5C4D0F007D8CF9 /* Views */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		11FAFE891D5C4D0F007D8CF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1103B0181D5D75BA0082D4BD /* ZBAdd.swift */,
+				1107ABE61D5C55CE001339CA /* adIcon.jpg */,
+				1107ABEC1D5C6D40001339CA /* AddItemCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		11FAFE8A1D5C4D17007D8CF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		11FAFE8B1D5C4D1D007D8CF9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1103B01C1D5D9C9C0082D4BD /* HeadViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,7 +445,10 @@
 			files = (
 				110D86F51D54878A00B4B352 /* LaunchScreen.storyboard in Resources */,
 				110D86F21D54878A00B4B352 /* Assets.xcassets in Resources */,
+				1103B0201D5DA7A30082D4BD /* AddSecondItems.plist in Resources */,
 				110D86F01D54878A00B4B352 /* Main.storyboard in Resources */,
+				1107ABE71D5C55CE001339CA /* adIcon.jpg in Resources */,
+				1107ABEF1D5C7299001339CA /* AddFirstItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,12 +463,15 @@
 				1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */,
 				111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */,
 				1108A3331D5B1C920026E6DC /* AddFriendsTVC.swift in Sources */,
+				1103B0191D5D75BA0082D4BD /* ZBAdd.swift in Sources */,
 				110D86ED1D54878A00B4B352 /* NewFeatureViewController.swift in Sources */,
 				1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */,
 				1108A3371D5B1DB20026E6DC /* FriendsMsgTVC.swift in Sources */,
 				1177B99A1D59D0FF00610927 /* UIImage+resizeImg.swift in Sources */,
+				1107ABED1D5C6D40001339CA /* AddItemCell.swift in Sources */,
 				1177B98D1D59B1C800610927 /* BadgeButton.swift in Sources */,
 				1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */,
+				1103B01D1D5D9C9C0082D4BD /* HeadViewController.swift in Sources */,
 				111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */,
 				110D86EB1D54878A00B4B352 /* AppDelegate.swift in Sources */,
 				1108A32B1D5ACA7D0026E6DC /* MessageTVC.swift in Sources */,
