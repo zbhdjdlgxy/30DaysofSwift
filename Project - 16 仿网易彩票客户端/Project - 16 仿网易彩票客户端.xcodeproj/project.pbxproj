@@ -26,6 +26,13 @@
 		111B9DD91D5862790045AEDA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DD81D5862790045AEDA /* HomeTVC.swift */; };
 		111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DDE1D5862F60045AEDA /* MeTVC.swift */; };
 		111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DE11D58645C0045AEDA /* BaseNavCTL.swift */; };
+		1148CA681D616778005233D3 /* SettingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA671D616778005233D3 /* SettingGroup.swift */; };
+		1148CA6A1D61687D005233D3 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA691D61687D005233D3 /* SettingItem.swift */; };
+		1148CA6C1D616976005233D3 /* SettingArrowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA6B1D616976005233D3 /* SettingArrowItem.swift */; };
+		1148CA6E1D616BE4005233D3 /* SettingSwitchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA6D1D616BE4005233D3 /* SettingSwitchItem.swift */; };
+		1148CA701D619EB3005233D3 /* BaseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA6F1D619EB3005233D3 /* BaseTVC.swift */; };
+		1148CA721D61A1D3005233D3 /* NewFriendsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA711D61A1D3005233D3 /* NewFriendsTVC.swift */; };
+		1148CA741D61A6BB005233D3 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148CA731D61A6BB005233D3 /* SettingCell.swift */; };
 		1177B98D1D59B1C800610927 /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B98C1D59B1C800610927 /* BadgeButton.swift */; };
 		1177B9951D59CA3A00610927 /* TabBarBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9941D59CA3A00610927 /* TabBarBtn.swift */; };
 		1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9971D59D0EB00610927 /* UIColor+RGB.swift */; };
@@ -55,6 +62,13 @@
 		111B9DD81D5862790045AEDA /* HomeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		111B9DDE1D5862F60045AEDA /* MeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTVC.swift; sourceTree = "<group>"; };
 		111B9DE11D58645C0045AEDA /* BaseNavCTL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavCTL.swift; sourceTree = "<group>"; };
+		1148CA671D616778005233D3 /* SettingGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingGroup.swift; sourceTree = "<group>"; };
+		1148CA691D61687D005233D3 /* SettingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
+		1148CA6B1D616976005233D3 /* SettingArrowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingArrowItem.swift; sourceTree = "<group>"; };
+		1148CA6D1D616BE4005233D3 /* SettingSwitchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingSwitchItem.swift; sourceTree = "<group>"; };
+		1148CA6F1D619EB3005233D3 /* BaseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTVC.swift; sourceTree = "<group>"; };
+		1148CA711D61A1D3005233D3 /* NewFriendsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFriendsTVC.swift; sourceTree = "<group>"; };
+		1148CA731D61A6BB005233D3 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		1177B98C1D59B1C800610927 /* BadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 		1177B9941D59CA3A00610927 /* TabBarBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarBtn.swift; sourceTree = "<group>"; };
 		1177B9971D59D0EB00610927 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
@@ -315,6 +329,7 @@
 		111B9DDB1D5862D80045AEDA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1148CA731D61A6BB005233D3 /* SettingCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -323,6 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				111B9DDE1D5862F60045AEDA /* MeTVC.swift */,
+				1148CA6F1D619EB3005233D3 /* BaseTVC.swift */,
+				1148CA711D61A1D3005233D3 /* NewFriendsTVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -330,6 +347,10 @@
 		111B9DDD1D5862E20045AEDA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1148CA671D616778005233D3 /* SettingGroup.swift */,
+				1148CA691D61687D005233D3 /* SettingItem.swift */,
+				1148CA6B1D616976005233D3 /* SettingArrowItem.swift */,
+				1148CA6D1D616BE4005233D3 /* SettingSwitchItem.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -464,13 +485,20 @@
 				111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */,
 				1108A3331D5B1C920026E6DC /* AddFriendsTVC.swift in Sources */,
 				1103B0191D5D75BA0082D4BD /* ZBAdd.swift in Sources */,
+				1148CA681D616778005233D3 /* SettingGroup.swift in Sources */,
 				110D86ED1D54878A00B4B352 /* NewFeatureViewController.swift in Sources */,
+				1148CA701D619EB3005233D3 /* BaseTVC.swift in Sources */,
+				1148CA721D61A1D3005233D3 /* NewFriendsTVC.swift in Sources */,
 				1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */,
 				1108A3371D5B1DB20026E6DC /* FriendsMsgTVC.swift in Sources */,
+				1148CA6E1D616BE4005233D3 /* SettingSwitchItem.swift in Sources */,
 				1177B99A1D59D0FF00610927 /* UIImage+resizeImg.swift in Sources */,
 				1107ABED1D5C6D40001339CA /* AddItemCell.swift in Sources */,
 				1177B98D1D59B1C800610927 /* BadgeButton.swift in Sources */,
 				1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */,
+				1148CA6C1D616976005233D3 /* SettingArrowItem.swift in Sources */,
+				1148CA6A1D61687D005233D3 /* SettingItem.swift in Sources */,
+				1148CA741D61A6BB005233D3 /* SettingCell.swift in Sources */,
 				1103B01D1D5D9C9C0082D4BD /* HeadViewController.swift in Sources */,
 				111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */,
 				110D86EB1D54878A00B4B352 /* AppDelegate.swift in Sources */,

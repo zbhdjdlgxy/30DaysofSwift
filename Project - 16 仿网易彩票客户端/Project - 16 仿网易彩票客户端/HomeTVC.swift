@@ -34,9 +34,10 @@ class HomeTVC: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("home")
+        let indentifer : String = "home"
+        var cell = tableView.dequeueReusableCellWithIdentifier(indentifer)
         if cell == nil {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "home")
+            cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: indentifer)
         }
         cell!.textLabel?.text = "abcd"
         // Configure the cell...

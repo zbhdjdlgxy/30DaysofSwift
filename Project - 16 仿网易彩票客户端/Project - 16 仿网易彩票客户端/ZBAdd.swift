@@ -155,6 +155,8 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
                 self.delegate?.zBAdd(selectIndex: indexPath)
             }
             
+        }else{
+            self.delegate?.zBAdd(selectIndex: indexPath)
         }
         
     }

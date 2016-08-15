@@ -8,79 +8,44 @@
 
 import UIKit
 
-class MeTVC: UITableViewController {
+class MeTVC: BaseTVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+//    MARK: dataSource
+    func setupGroup(){
+        
+        let item : SettingArrowItem = SettingArrowItem.item("新的好友", icon: "", destVC: NewFriendsTVC.classForCoder())
+        let item2 : SettingItem = SettingItem.item("新手任务", icon: "")
+        let group : SettingGroup = SettingGroup()
+        group.items = [item,item2]
+        self.data?.append(group)
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func setupGroup2(){
+        
+        let item : SettingItem = SettingItem.item("我的相册", icon: "")
+        let item2 : SettingItem = SettingItem.item("我的赞", icon: "")
+        let group : SettingGroup = SettingGroup()
+        group.items = [item,item2]
+        self.data?.append(group)
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    func setupGroup3(){
+        
+        let item : SettingItem = SettingItem.item("微博支付", icon: "")
+        let item2 : SettingItem = SettingItem.item("微博运动", icon: "")
+        let group : SettingGroup = SettingGroup()
+        group.items = [item,item2]
+        self.data?.append(group)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func setupGroup4(){
+        
+        let item : SettingItem = SettingItem.item("草稿箱", icon: "")
+        let group : SettingGroup = SettingGroup()
+        group.items = [item]
+        self.data?.append(group)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
