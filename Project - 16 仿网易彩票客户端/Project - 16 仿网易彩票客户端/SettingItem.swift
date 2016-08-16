@@ -8,32 +8,35 @@
 
 import UIKit
 
+typealias operationOption = (() -> Void)
 class SettingItem: NSObject {
     
 
     var title : String?
     var icon : String?
+    var option : operationOption?
     
-    class func item() -> SettingItem{
+    
+    
+    
+    func item() -> SettingItem{
         
-        let item : SettingItem = SettingItem()
-        return item
-        
-    }
-    class func item(title : String)-> SettingItem{
-        
-        
-        let item : SettingItem = SettingItem()
-        item.title = title
-        return item
-    }
-    class func item(title : String,icon : String)-> SettingItem{
-        
-        let item : SettingItem = SettingItem()
-        item.title = title
-        item.icon = icon
-        return item
+        return self
         
     }
     
+    func item(title : String,icon : String)-> AnyObject{
+        
+        self.title = title
+        self.icon = icon
+        return self
+        
+    }
+    
+    func item(title : String)-> AnyObject{
+        
+        self.title = title
+        return self
+        
+    }
 }

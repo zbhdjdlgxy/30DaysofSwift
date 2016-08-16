@@ -10,7 +10,22 @@ import UIKit
 
 final class SettingCell: UITableViewCell {
 
-    var item : SettingItem?
+    var item : SettingItem = SettingItem(){
+        
+        willSet{
+            
+            if newValue.icon != nil {
+                self.imageView?.image = UIImage.init(named: newValue.icon!)
+            }
+            self.textLabel?.text = newValue.title
+            if newValue is SettingArrowItem {
+                self.accessoryType = .DisclosureIndicator
+            }else if newValue is SettingSwitchItem{
+                
+                self.accessoryView = UISwitch.init()
+            }
+        }
+    }
     
     
     class func cellWithTableView(tableView : UITableView) -> SettingCell {

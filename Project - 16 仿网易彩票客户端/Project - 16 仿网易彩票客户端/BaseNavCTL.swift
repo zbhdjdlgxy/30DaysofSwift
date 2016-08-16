@@ -12,8 +12,17 @@ class BaseNavCTL: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupBarButtonItem()
        
+       
+    }
+    
+    //设置导航栏按钮主题
+    func setupBarButtonItem() {
+        
+        let barItem : UIBarButtonItem = UIBarButtonItem.appearance()
+    
+        barItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orangeColor(),NSFontAttributeName : UIFont.systemFontOfSize(17)], forState: .Normal)
     }
     
     override func pushViewController(viewController: UIViewController, animated: Bool){

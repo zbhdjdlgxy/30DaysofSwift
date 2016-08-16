@@ -12,40 +12,61 @@ class MeTVC: BaseTVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupGroup()
+        self.setupGroup2()
+        self.setupGroup3()
+        self.setupGroup4()
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "设置", style: .Bordered, target: self, action: #selector(self.setup))
+    }
+    
+    func setup() {
         
+        let setVc : SetTableViewController = SetTableViewController(style: .Grouped)
+        setVc.title = "设置"
+        self.navigationController?.pushViewController(setVc, animated: true)
     }
 //    MARK: dataSource
     func setupGroup(){
-        
-        let item : SettingArrowItem = SettingArrowItem.item("新的好友", icon: "", destVC: NewFriendsTVC.classForCoder())
-        let item2 : SettingItem = SettingItem.item("新手任务", icon: "")
+        let item = SettingArrowItem()
+        let item2 = SettingItem()
+        item.item("新的好友", destVC: NewFriendsTVC.classForCoder(), icon: "new_friend")
+        item2.item("新手任务", icon: "card")
         let group : SettingGroup = SettingGroup()
         group.items = [item,item2]
-        self.data?.append(group)
+        self.data.append(group)
     }
     
     func setupGroup2(){
         
-        let item : SettingItem = SettingItem.item("我的相册", icon: "")
-        let item2 : SettingItem = SettingItem.item("我的赞", icon: "")
+        
+        let item = SettingItem()
+        let item2 = SettingItem()
+        
+        item.item("我的相册", icon: "album")
+        item2.item("我的收藏", icon: "collect")
         let group : SettingGroup = SettingGroup()
         group.items = [item,item2]
-        self.data?.append(group)
+        self.data.append(group)
     }
     func setupGroup3(){
         
-        let item : SettingItem = SettingItem.item("微博支付", icon: "")
-        let item2 : SettingItem = SettingItem.item("微博运动", icon: "")
+        
+        let item = SettingItem()
+        let item2 = SettingItem()
+        
+        item.item("微博支付", icon: "pay")
+        item2.item("会员中心", icon: "vip")
         let group : SettingGroup = SettingGroup()
         group.items = [item,item2]
-        self.data?.append(group)
+        self.data.append(group)
     }
     func setupGroup4(){
         
-        let item : SettingItem = SettingItem.item("草稿箱", icon: "")
+        let item = SettingItem()
+        item.item("草稿箱", icon: "draft")
         let group : SettingGroup = SettingGroup()
         group.items = [item]
-        self.data?.append(group)
+        self.data.append(group)
     }
 }

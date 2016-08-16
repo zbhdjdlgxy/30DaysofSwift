@@ -55,7 +55,7 @@ class MainTabbarController: UITabBarController,ZBTabBarDelegate,ZBAddDelegate{
         self.setupChildViewController(discover, title: "广场", imageName: "tabbar_discover", selectedImageName: "tabbar_discover_selected")
         
         // 4.我
-        let meTVC : MeTVC = MeTVC()
+        let meTVC : MeTVC = MeTVC(style: .Grouped)
         self.setupChildViewController(meTVC, title: "我", imageName: "tabbar_profile", selectedImageName: "tabbar_profile_selected")
     }
     func setupChildViewController(childVc : UIViewController,title:String,imageName:String,selectedImageName:String) {

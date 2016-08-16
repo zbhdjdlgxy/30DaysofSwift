@@ -8,24 +8,16 @@
 
 import UIKit
 
+
 final class SettingArrowItem: SettingItem {
 
     var destVc : AnyClass?
     
-    class func item(title : String,icon : String,destVC : AnyClass) -> SettingArrowItem{
-        
-        let item : SettingArrowItem = SettingArrowItem()
-        item.title = title
-        item.icon = icon
-        item.destVc = destVC
-        return item
+
+    func item(title : String,destVC : AnyClass,icon: String = "") -> SettingArrowItem{
+        self.item(title, icon: icon)
+        self.destVc = destVC
+        return self
     }
     
-    class func item(title : String,destVC : AnyClass) -> SettingArrowItem{
-        
-        let item : SettingArrowItem = SettingArrowItem()
-        item.title = title
-        item.destVc = destVC
-        return item
-    }
 }

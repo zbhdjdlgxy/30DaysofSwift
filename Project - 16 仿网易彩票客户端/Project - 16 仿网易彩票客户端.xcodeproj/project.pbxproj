@@ -38,6 +38,9 @@
 		1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9971D59D0EB00610927 /* UIColor+RGB.swift */; };
 		1177B99A1D59D0FF00610927 /* UIImage+resizeImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B9991D59D0FF00610927 /* UIImage+resizeImg.swift */; };
 		1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177B99B1D59DC1800610927 /* ZBTabBar.swift */; };
+		11D8E06B1D62B42700B664B6 /* GeneralSetTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D8E0691D62B42700B664B6 /* GeneralSetTVC.swift */; };
+		11D8E0721D62B66600B664B6 /* SetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D8E0711D62B66600B664B6 /* SetTableViewController.swift */; };
+		11D8E0741D62B95200B664B6 /* SetFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D8E0731D62B95200B664B6 /* SetFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		1177B9971D59D0EB00610927 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		1177B9991D59D0FF00610927 /* UIImage+resizeImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+resizeImg.swift"; sourceTree = "<group>"; };
 		1177B99B1D59DC1800610927 /* ZBTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBTabBar.swift; sourceTree = "<group>"; };
+		11D8E0691D62B42700B664B6 /* GeneralSetTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSetTVC.swift; sourceTree = "<group>"; };
+		11D8E0711D62B66600B664B6 /* SetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTableViewController.swift; sourceTree = "<group>"; };
+		11D8E0731D62B95200B664B6 /* SetFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				1148CA731D61A6BB005233D3 /* SettingCell.swift */,
+				11D8E0731D62B95200B664B6 /* SetFooterView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -337,9 +344,11 @@
 		111B9DDC1D5862DC0045AEDA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11D8E0691D62B42700B664B6 /* GeneralSetTVC.swift */,
 				111B9DDE1D5862F60045AEDA /* MeTVC.swift */,
 				1148CA6F1D619EB3005233D3 /* BaseTVC.swift */,
 				1148CA711D61A1D3005233D3 /* NewFriendsTVC.swift */,
+				11D8E0711D62B66600B664B6 /* SetTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -492,13 +501,16 @@
 				1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */,
 				1108A3371D5B1DB20026E6DC /* FriendsMsgTVC.swift in Sources */,
 				1148CA6E1D616BE4005233D3 /* SettingSwitchItem.swift in Sources */,
+				11D8E0741D62B95200B664B6 /* SetFooterView.swift in Sources */,
 				1177B99A1D59D0FF00610927 /* UIImage+resizeImg.swift in Sources */,
 				1107ABED1D5C6D40001339CA /* AddItemCell.swift in Sources */,
 				1177B98D1D59B1C800610927 /* BadgeButton.swift in Sources */,
+				11D8E06B1D62B42700B664B6 /* GeneralSetTVC.swift in Sources */,
 				1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */,
 				1148CA6C1D616976005233D3 /* SettingArrowItem.swift in Sources */,
 				1148CA6A1D61687D005233D3 /* SettingItem.swift in Sources */,
 				1148CA741D61A6BB005233D3 /* SettingCell.swift in Sources */,
+				11D8E0721D62B66600B664B6 /* SetTableViewController.swift in Sources */,
 				1103B01D1D5D9C9C0082D4BD /* HeadViewController.swift in Sources */,
 				111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */,
 				110D86EB1D54878A00B4B352 /* AppDelegate.swift in Sources */,
