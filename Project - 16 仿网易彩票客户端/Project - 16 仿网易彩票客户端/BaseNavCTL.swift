@@ -16,7 +16,10 @@ class BaseNavCTL: UINavigationController {
        
        
     }
-    
+    func back() {
+        
+        self.popViewControllerAnimated(true)
+    }
     //设置导航栏按钮主题
     func setupBarButtonItem() {
         
@@ -28,6 +31,7 @@ class BaseNavCTL: UINavigationController {
     override func pushViewController(viewController: UIViewController, animated: Bool){
         if self.viewControllers.count > 0{
             viewController.hidesBottomBarWhenPushed = true
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "navigationbar_back_highlighted"), style: .Bordered, target: self, action: #selector(self.back))
         }
         
         super.pushViewController(viewController, animated: animated)

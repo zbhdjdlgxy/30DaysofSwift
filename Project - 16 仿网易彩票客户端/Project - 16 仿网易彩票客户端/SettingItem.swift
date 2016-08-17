@@ -16,18 +16,9 @@ class SettingItem: NSObject {
     var icon : String?
     var option : operationOption?
     
-    
-    
-    
-    func item() -> SettingItem{
-        
-        return self
-        
-    }
-    
     func item(title : String,icon : String)-> AnyObject{
         
-        self.title = title
+        self.item(title)
         self.icon = icon
         return self
         

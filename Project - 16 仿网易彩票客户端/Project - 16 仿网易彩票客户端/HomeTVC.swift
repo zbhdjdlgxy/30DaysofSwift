@@ -7,8 +7,9 @@
 //
 
 import UIKit
-
 class HomeTVC: UITableViewController {
+    
+    var dataCount : Int = 5
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -18,6 +19,25 @@ class HomeTVC: UITableViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.whiteColor()
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW,(Int64)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                
+                self.dataCount += 5
+                self.tableView.reloadData()
+                self.tableView.mj_header.endRefreshing()
+            })
+        })
+        
+        self.tableView.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW,(Int64)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                
+                self.dataCount += 5
+                self.tableView.reloadData()
+                self.tableView.mj_footer.endRefreshing()
+            })
+        })
     }
 
     // MARK: - Table view data source
@@ -29,7 +49,7 @@ class HomeTVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return dataCount
     }
 
     
