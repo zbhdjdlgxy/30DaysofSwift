@@ -65,37 +65,44 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
     override func layoutSubviews() {
         
         super.layoutSubviews()
-        self.dateLabel.frame = CGRectMake(10, 100, self.frame.size.width, 30)
-        self.adImageView.frame = CGRectMake(self.frame.size.width - 140 - 10, 66, 140, 140)
+        self.dateLabel.frame = CGRectMake(10, 100, SCREEN_WIDTH, 30)
+        self.adImageView.frame = CGRectMake(SCREEN_WIDTH - 140 - 10, 66, 140, 140)
         
-        self.firstCollectionView.frame = CGRectMake(0, self.frame.size.height, self.frame.size.width, self.frame.size.height - 300 - 49)
+        self.firstCollectionView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - 300 - 49)
         self.firstCollectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20)
         
-        self.secondCollectionView.frame = CGRectMake(0, 300, self.frame.size.width, self.frame.size.height - 300 - 49)
+        self.secondCollectionView.frame = CGRectMake(0, 300, SCREEN_WIDTH, SCREEN_HEIGHT - 300 - 49)
         self.secondCollectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20)
         
         
-        self.exitBtn.frame = CGRectMake(0, self.frame.size.height - 49, self.frame.size.width, 49)
-        self.backBtn.frame = CGRectMake(0, self.frame.size.height - 49, self.frame.size.width/2, 49)
-        self.exitBtn2.frame = CGRectMake(self.frame.size.width/2, self.frame.size.height - 49, self.frame.size.width/2, 49)
+        self.exitBtn.frame = CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH, 49)
+        self.backBtn.frame = CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH/2, 49)
+        self.exitBtn2.frame = CGRectMake(SCREEN_WIDTH/2, SCREEN_HEIGHT - 49, SCREEN_WIDTH/2, 49)
         
-        self.exitImgView.frame = CGRectMake((self.frame.size.width - 50)/2,self.frame.size.height - 49 , 50, 50)
+        self.exitImgView.frame = CGRectMake((SCREEN_WIDTH - 50)/2,SCREEN_HEIGHT - 49 , 50, 50)
         UIView.animateWithDuration(0.3) {
             self.exitImgView.transform = CGAffineTransformMakeRotation((CGFloat)(M_PI/4))
         }
-        self.exitImgView.transform = CGAffineTransformMakeRotation((CGFloat)(M_PI/4))
+        
         
         UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: .CurveLinear, animations: {
-        self.firstCollectionView.frame = CGRectMake(0, 300, self.frame.size.width, self.frame.size.height - 300 - 49)
+        self.firstCollectionView.frame = CGRectMake(0, 300, SCREEN_WIDTH, SCREEN_HEIGHT - 300 - 49)
         
         }, completion: nil)
         
     }
     
     func exitAction() {
-
         
-        self.removeFromSuperview()
+        UIView.animateWithDuration(0.5, animations: {
+            self.firstCollectionView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - 300 - 49)
+
+            }) { (true) in
+                
+                self.removeFromSuperview()
+        }
+        
+        
     }
     
     func backAction() {

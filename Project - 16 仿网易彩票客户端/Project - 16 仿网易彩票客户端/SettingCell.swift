@@ -13,7 +13,7 @@ final class SettingCell: UITableViewCell {
     var item : SettingItem = SettingItem(){
         
         willSet{
-            
+
             if newValue.icon != nil {
                 self.imageView?.image = UIImage.init(named: newValue.icon!)
             }

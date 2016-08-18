@@ -22,6 +22,12 @@
 		110D86F01D54878A00B4B352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110D86EE1D54878A00B4B352 /* Main.storyboard */; };
 		110D86F21D54878A00B4B352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110D86F11D54878A00B4B352 /* Assets.xcassets */; };
 		110D86F51D54878A00B4B352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110D86F31D54878A00B4B352 /* LaunchScreen.storyboard */; };
+		1115BC6B1D65A57800E258D5 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115BC6A1D65A57800E258D5 /* Global.swift */; };
+		1115BC7B1D65B17700E258D5 /* ZBHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115BC7A1D65B17700E258D5 /* ZBHttpTool.swift */; };
+		1115BC7D1D65BA1300E258D5 /* ZBStatusTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115BC7C1D65BA1300E258D5 /* ZBStatusTool.swift */; };
+		1115BC7F1D65BB4300E258D5 /* ZBHomeStatusesParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115BC7E1D65BB4300E258D5 /* ZBHomeStatusesParam.swift */; };
+		1115BC811D65BB7F00E258D5 /* ZBHomeStatusesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115BC801D65BB7F00E258D5 /* ZBHomeStatusesResult.swift */; };
+		1115BC831D65BC5D00E258D5 /* ZBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115BC821D65BC5D00E258D5 /* ZBStatus.swift */; };
 		111B9DD31D5860E90045AEDA /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DD21D5860E90045AEDA /* MainTabbarController.swift */; };
 		111B9DD91D5862790045AEDA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DD81D5862790045AEDA /* HomeTVC.swift */; };
 		111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DDE1D5862F60045AEDA /* MeTVC.swift */; };
@@ -81,6 +87,12 @@
 		110D86F11D54878A00B4B352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		110D86F41D54878A00B4B352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		110D86F61D54878A00B4B352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1115BC6A1D65A57800E258D5 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		1115BC7A1D65B17700E258D5 /* ZBHttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHttpTool.swift; sourceTree = "<group>"; };
+		1115BC7C1D65BA1300E258D5 /* ZBStatusTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBStatusTool.swift; sourceTree = "<group>"; };
+		1115BC7E1D65BB4300E258D5 /* ZBHomeStatusesParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomeStatusesParam.swift; sourceTree = "<group>"; };
+		1115BC801D65BB7F00E258D5 /* ZBHomeStatusesResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomeStatusesResult.swift; sourceTree = "<group>"; };
+		1115BC821D65BC5D00E258D5 /* ZBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBStatus.swift; sourceTree = "<group>"; };
 		111B9DD21D5860E90045AEDA /* MainTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		111B9DD81D5862790045AEDA /* HomeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		111B9DDE1D5862F60045AEDA /* MeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTVC.swift; sourceTree = "<group>"; };
@@ -270,6 +282,7 @@
 		110D86FD1D549AAA00B4B352 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				1115BC721D65B0DB00E258D5 /* Tools */,
 				1103B0281D5DC7450082D4BD /* Resources */,
 				1177B98E1D59BD6800610927 /* Catogory */,
 				1142345F1D5985E400274CC4 /* ThirdParty */,
@@ -280,6 +293,7 @@
 				110D86EA1D54878A00B4B352 /* AppDelegate.swift */,
 				112B91B31D64528F00DD12D5 /* Project - 16 仿网易彩票客户端-Bridging-Header.h */,
 				112B91B81D645CAB00DD12D5 /* Weibo_bridge.h */,
+				1115BC6A1D65A57800E258D5 /* Global.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -304,6 +318,22 @@
 				110D86EC1D54878A00B4B352 /* NewFeatureViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1115BC6E1D65B02700E258D5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1115BC7C1D65BA1300E258D5 /* ZBStatusTool.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		1115BC721D65B0DB00E258D5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1115BC7A1D65B17700E258D5 /* ZBHttpTool.swift */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		111B9DCD1D5860520045AEDA /* Feature */ = {
@@ -355,6 +385,7 @@
 		111B9DD41D58622F0045AEDA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1115BC6E1D65B02700E258D5 /* Tools */,
 				111B9DD71D5862580045AEDA /* Models */,
 				111B9DD61D5862520045AEDA /* Controllers */,
 				111B9DD51D58624C0045AEDA /* Views */,
@@ -382,6 +413,9 @@
 		111B9DD71D5862580045AEDA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1115BC7E1D65BB4300E258D5 /* ZBHomeStatusesParam.swift */,
+				1115BC801D65BB7F00E258D5 /* ZBHomeStatusesResult.swift */,
+				1115BC821D65BC5D00E258D5 /* ZBStatus.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -690,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1115BC7F1D65BB4300E258D5 /* ZBHomeStatusesParam.swift in Sources */,
 				1177B9951D59CA3A00610927 /* TabBarBtn.swift in Sources */,
 				112B91981D644ED300DD12D5 /* MJRefreshAutoGifFooter.m in Sources */,
 				112B919D1D644ED300DD12D5 /* MJRefreshBackStateFooter.m in Sources */,
@@ -697,7 +732,9 @@
 				1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */,
 				111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */,
 				112B91931D644ED300DD12D5 /* MJRefreshAutoFooter.m in Sources */,
+				1115BC7B1D65B17700E258D5 /* ZBHttpTool.swift in Sources */,
 				1108A3331D5B1C920026E6DC /* AddFriendsTVC.swift in Sources */,
+				1115BC6B1D65A57800E258D5 /* Global.swift in Sources */,
 				112B91A61D644ED300DD12D5 /* UIView+MJExtension.m in Sources */,
 				1103B0191D5D75BA0082D4BD /* ZBAdd.swift in Sources */,
 				112B91A41D644ED300DD12D5 /* UIScrollView+MJExtension.m in Sources */,
@@ -708,6 +745,7 @@
 				112B91971D644ED300DD12D5 /* MJRefreshHeader.m in Sources */,
 				1148CA721D61A1D3005233D3 /* NewFriendsTVC.swift in Sources */,
 				112B91A31D644ED300DD12D5 /* NSBundle+MJRefresh.m in Sources */,
+				1115BC811D65BB7F00E258D5 /* ZBHomeStatusesResult.swift in Sources */,
 				1177B99C1D59DC1800610927 /* ZBTabBar.swift in Sources */,
 				112B91A51D644ED300DD12D5 /* UIScrollView+MJRefresh.m in Sources */,
 				1108A3371D5B1DB20026E6DC /* FriendsMsgTVC.swift in Sources */,
@@ -723,6 +761,7 @@
 				1148CA6C1D616976005233D3 /* SettingArrowItem.swift in Sources */,
 				1148CA6A1D61687D005233D3 /* SettingItem.swift in Sources */,
 				112B919E1D644ED300DD12D5 /* MJRefreshGifHeader.m in Sources */,
+				1115BC831D65BC5D00E258D5 /* ZBStatus.swift in Sources */,
 				1148CA741D61A6BB005233D3 /* SettingCell.swift in Sources */,
 				112B91991D644ED300DD12D5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				112B919B1D644ED300DD12D5 /* MJRefreshBackGifFooter.m in Sources */,
@@ -733,6 +772,7 @@
 				1108A32B1D5ACA7D0026E6DC /* MessageTVC.swift in Sources */,
 				112B91A01D644ED300DD12D5 /* MJRefreshStateHeader.m in Sources */,
 				111B9DD91D5862790045AEDA /* HomeTVC.swift in Sources */,
+				1115BC7D1D65BA1300E258D5 /* ZBStatusTool.swift in Sources */,
 				112B91A21D644ED300DD12D5 /* MJRefreshConst.m in Sources */,
 				111B9DD31D5860E90045AEDA /* MainTabbarController.swift in Sources */,
 				112B919F1D644ED300DD12D5 /* MJRefreshNormalHeader.m in Sources */,

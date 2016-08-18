@@ -50,8 +50,8 @@ class ZBTabBar: UIView{
         
         super.layoutSubviews()
         // 调整加号按钮的位置
-        let h : CGFloat = self.frame.size.height;
-        let w : CGFloat = self.frame.size.width;
+        let h : CGFloat = SCREEN_HEIGHT
+        let w : CGFloat = SCREEN_WIDTH
         self.plusBtn.center = CGPointMake(w * 0.5, h * 0.5)
         // 按钮的frame数据
         let buttonH : CGFloat = h
