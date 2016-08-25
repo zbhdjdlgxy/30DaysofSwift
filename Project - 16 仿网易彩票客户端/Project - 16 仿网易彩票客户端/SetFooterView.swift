@@ -32,7 +32,7 @@ class SetFooterView: UIView {
     override func layoutSubviews() {
         
         super.layoutSubviews()
-        exitBtn.frame = CGRectMake(20, 10, SCREEN_HEIGHT - 40, SCREEN_HEIGHT - 10)
+        exitBtn.frame = CGRectMake(20, 10, self.frame.size.width - 40, self.frame.size.height - 10)
     }
     
     final func logout() {
