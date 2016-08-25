@@ -14,8 +14,14 @@ final class SettingArrowItem: SettingItem {
     var destVc : AnyClass?
     
 
-    func item(title : String,destVC : AnyClass,icon: String = "") -> SettingArrowItem{
+    func item(title : String,destVC : AnyClass,icon: String) -> SettingArrowItem{
         self.item(title, icon: icon)
+        self.destVc = destVC
+        return self
+    }
+    
+    func item(title : String,destVC : AnyClass) -> SettingArrowItem{
+        self.item(title)
         self.destVc = destVC
         return self
     }

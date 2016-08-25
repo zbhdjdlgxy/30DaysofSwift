@@ -39,7 +39,6 @@ class ZBTabBar: UIView{
         super.init(frame: frame)
         self.addSubview(self.plusBtn)
         
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
