@@ -21,22 +21,12 @@ final class SettingCell: UITableViewCell {
             if newValue is SettingArrowItem {
                 self.accessoryType = .DisclosureIndicator
             }else if newValue is SettingSwitchItem{
-                let setting : NSUserDefaults = NSUserDefaults()
-                let switchControl : UISwitch = UISwitch.init()
-                switchControl.addTarget(self, action: #selector(self.changeSwitchState(_:)), forControlEvents: .TouchUpInside)
-                switchControl.on = setting.boolForKey(newValue.title!)
-                self.accessoryView = switchControl
+                
+                self.accessoryView = UISwitch.init()
             }
         }
     }
     
-//    MARK: 点击开关存储开关状态
-    func changeSwitchState(switchControl : UISwitch) {
-        
-        let setting : NSUserDefaults = NSUserDefaults()
-        setting.setBool(switchControl.on, forKey: self.item.title!)
-        setting.synchronize()
-    }
     
     class func cellWithTableView(tableView : UITableView) -> SettingCell {
         
