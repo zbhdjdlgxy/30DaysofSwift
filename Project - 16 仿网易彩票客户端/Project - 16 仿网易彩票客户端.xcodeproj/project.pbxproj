@@ -26,6 +26,10 @@
 		111B9DD91D5862790045AEDA /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DD81D5862790045AEDA /* HomeTVC.swift */; };
 		111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DDE1D5862F60045AEDA /* MeTVC.swift */; };
 		111B9DE21D58645C0045AEDA /* BaseNavCTL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B9DE11D58645C0045AEDA /* BaseNavCTL.swift */; };
+		112733B81D6EF80100C9B0C0 /* ZBStatusTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112733B71D6EF80100C9B0C0 /* ZBStatusTool.swift */; };
+		112733BC1D6EF80900C9B0C0 /* ZBHomeStatusesParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112733B91D6EF80900C9B0C0 /* ZBHomeStatusesParam.swift */; };
+		112733BD1D6EF80900C9B0C0 /* ZBHomeStatusesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112733BA1D6EF80900C9B0C0 /* ZBHomeStatusesResult.swift */; };
+		112733BE1D6EF80900C9B0C0 /* ZBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112733BB1D6EF80900C9B0C0 /* ZBStatus.swift */; };
 		112B91931D644ED300DD12D5 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B91671D644ED300DD12D5 /* MJRefreshAutoFooter.m */; };
 		112B91941D644ED300DD12D5 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B91691D644ED300DD12D5 /* MJRefreshBackFooter.m */; };
 		112B91951D644ED300DD12D5 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B916B1D644ED300DD12D5 /* MJRefreshComponent.m */; };
@@ -85,6 +89,10 @@
 		111B9DD81D5862790045AEDA /* HomeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		111B9DDE1D5862F60045AEDA /* MeTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTVC.swift; sourceTree = "<group>"; };
 		111B9DE11D58645C0045AEDA /* BaseNavCTL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavCTL.swift; sourceTree = "<group>"; };
+		112733B71D6EF80100C9B0C0 /* ZBStatusTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBStatusTool.swift; sourceTree = "<group>"; };
+		112733B91D6EF80900C9B0C0 /* ZBHomeStatusesParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomeStatusesParam.swift; sourceTree = "<group>"; };
+		112733BA1D6EF80900C9B0C0 /* ZBHomeStatusesResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomeStatusesResult.swift; sourceTree = "<group>"; };
+		112733BB1D6EF80900C9B0C0 /* ZBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBStatus.swift; sourceTree = "<group>"; };
 		112B91661D644ED300DD12D5 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		112B91671D644ED300DD12D5 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		112B91681D644ED300DD12D5 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -355,6 +363,7 @@
 		111B9DD41D58622F0045AEDA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				112733B61D6EF7F600C9B0C0 /* Tools */,
 				111B9DD71D5862580045AEDA /* Models */,
 				111B9DD61D5862520045AEDA /* Controllers */,
 				111B9DD51D58624C0045AEDA /* Views */,
@@ -382,6 +391,9 @@
 		111B9DD71D5862580045AEDA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				112733B91D6EF80900C9B0C0 /* ZBHomeStatusesParam.swift */,
+				112733BA1D6EF80900C9B0C0 /* ZBHomeStatusesResult.swift */,
+				112733BB1D6EF80900C9B0C0 /* ZBStatus.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -393,6 +405,14 @@
 				112B91171D63F9EB00DD12D5 /* Me */,
 			);
 			name = Me;
+			sourceTree = "<group>";
+		};
+		112733B61D6EF7F600C9B0C0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				112733B71D6EF80100C9B0C0 /* ZBStatusTool.swift */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		112B91171D63F9EB00DD12D5 /* Me */ = {
@@ -691,9 +711,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1177B9951D59CA3A00610927 /* TabBarBtn.swift in Sources */,
+				112733BD1D6EF80900C9B0C0 /* ZBHomeStatusesResult.swift in Sources */,
 				112B91981D644ED300DD12D5 /* MJRefreshAutoGifFooter.m in Sources */,
 				112B919D1D644ED300DD12D5 /* MJRefreshBackStateFooter.m in Sources */,
 				112B91961D644ED300DD12D5 /* MJRefreshFooter.m in Sources */,
+				112733BC1D6EF80900C9B0C0 /* ZBHomeStatusesParam.swift in Sources */,
 				1177B9981D59D0EB00610927 /* UIColor+RGB.swift in Sources */,
 				111B9DDF1D5862F60045AEDA /* MeTVC.swift in Sources */,
 				112B91931D644ED300DD12D5 /* MJRefreshAutoFooter.m in Sources */,
@@ -701,6 +723,7 @@
 				112B91A61D644ED300DD12D5 /* UIView+MJExtension.m in Sources */,
 				1103B0191D5D75BA0082D4BD /* ZBAdd.swift in Sources */,
 				112B91A41D644ED300DD12D5 /* UIScrollView+MJExtension.m in Sources */,
+				112733B81D6EF80100C9B0C0 /* ZBStatusTool.swift in Sources */,
 				112B919A1D644ED300DD12D5 /* MJRefreshAutoStateFooter.m in Sources */,
 				1148CA681D616778005233D3 /* SettingGroup.swift in Sources */,
 				110D86ED1D54878A00B4B352 /* NewFeatureViewController.swift in Sources */,
@@ -721,6 +744,7 @@
 				112B91941D644ED300DD12D5 /* MJRefreshBackFooter.m in Sources */,
 				1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */,
 				1148CA6C1D616976005233D3 /* SettingArrowItem.swift in Sources */,
+				112733BE1D6EF80900C9B0C0 /* ZBStatus.swift in Sources */,
 				1148CA6A1D61687D005233D3 /* SettingItem.swift in Sources */,
 				112B919E1D644ED300DD12D5 /* MJRefreshGifHeader.m in Sources */,
 				1148CA741D61A6BB005233D3 /* SettingCell.swift in Sources */,
