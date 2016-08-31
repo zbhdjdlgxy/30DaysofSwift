@@ -10,7 +10,7 @@ import UIKit
 
 protocol ZBAddDelegate {
     
-    func zBAdd(selectIndex selectItemIndex : NSIndexPath)
+    func zBAdd(selectIndex selectItemIndex : NSIndexPath,title: String)
 }
 
 
@@ -152,11 +152,13 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
                 self.secondCollectionView.layer.addAnimation(self.pushAnim(kCATransitionFromRight), forKey: nil)
                 
             }else{
-                self.delegate?.zBAdd(selectIndex: indexPath)
+                let msgDic = firstContentArr?.objectAtIndex(indexPath.section * 3 + indexPath.row) as! NSDictionary
+                self.delegate?.zBAdd(selectIndex: indexPath, title: msgDic["title"] as! String)
             }
             
         }else{
-            self.delegate?.zBAdd(selectIndex: indexPath)
+            let msgDic = secondContentArr?.objectAtIndex(indexPath.section * 3 + indexPath.row) as! NSDictionary
+            self.delegate?.zBAdd(selectIndex: indexPath, title: msgDic["title"] as! String)
         }
         
     }

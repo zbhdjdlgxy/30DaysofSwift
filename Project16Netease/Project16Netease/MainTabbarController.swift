@@ -51,7 +51,7 @@ class MainTabbarController: UITabBarController,ZBTabBarDelegate,ZBAddDelegate{
         self.setupChildViewController(messageTVC, title: "消息", imageName: "tabbar_message_center", selectedImageName: "tabbar_message_center_selected")
         
         // 3.广场
-        let discover : DiscoveryTVC = DiscoveryTVC()
+        let discover : DiscoveryVC = DiscoveryVC()
         self.setupChildViewController(discover, title: "广场", imageName: "tabbar_discover", selectedImageName: "tabbar_discover_selected")
         
         // 4.我
@@ -77,11 +77,11 @@ class MainTabbarController: UITabBarController,ZBTabBarDelegate,ZBAddDelegate{
     }
     
 //    MARK: ZBAddDelegate
-    func zBAdd(selectIndex selectItemIndex : NSIndexPath){
+    func zBAdd(selectIndex selectItemIndex : NSIndexPath,title: String){
         
         if selectItemIndex.section != 1 || selectItemIndex.row != 2 {
             let headVC : HeadViewController = HeadViewController()
-            headVC.title = "编辑头条文章"
+            headVC.title = title
             let nav : BaseNavCTL = BaseNavCTL(rootViewController: headVC)
             self.presentViewController(nav, animated: true, completion: nil)
         }

@@ -14,7 +14,6 @@
 		1107ABED1D5C6D40001339CA /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107ABEC1D5C6D40001339CA /* AddItemCell.swift */; };
 		1107ABEF1D5C7299001339CA /* AddFirstItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1107ABEE1D5C7299001339CA /* AddFirstItems.plist */; };
 		1108A32B1D5ACA7D0026E6DC /* MessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A32A1D5ACA7D0026E6DC /* MessageTVC.swift */; };
-		1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A3301D5ACAB90026E6DC /* DiscoveryTVC.swift */; };
 		1108A3331D5B1C920026E6DC /* AddFriendsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A3321D5B1C920026E6DC /* AddFriendsTVC.swift */; };
 		1108A3371D5B1DB20026E6DC /* FriendsMsgTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1108A3361D5B1DB20026E6DC /* FriendsMsgTVC.swift */; };
 		110D86EB1D54878A00B4B352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D86EA1D54878A00B4B352 /* AppDelegate.swift */; };
@@ -83,6 +82,7 @@
 		11EB72D51D757C7F000D9C9D /* ShopCarGoodsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB72D41D757C7F000D9C9D /* ShopCarGoodsItem.swift */; };
 		11FC6A681D767CE8008D13B5 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FC6A651D767CE8008D13B5 /* MBProgressHUD+MJ.m */; };
 		11FC6A691D767CE8008D13B5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FC6A671D767CE8008D13B5 /* MBProgressHUD.m */; };
+		11FC6A721D76824B008D13B5 /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC6A711D76824B008D13B5 /* DiscoveryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +166,6 @@
 		1107ABEC1D5C6D40001339CA /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
 		1107ABEE1D5C7299001339CA /* AddFirstItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AddFirstItems.plist; sourceTree = "<group>"; };
 		1108A32A1D5ACA7D0026E6DC /* MessageTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTVC.swift; sourceTree = "<group>"; };
-		1108A3301D5ACAB90026E6DC /* DiscoveryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryTVC.swift; sourceTree = "<group>"; };
 		1108A3321D5B1C920026E6DC /* AddFriendsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsTVC.swift; sourceTree = "<group>"; };
 		1108A3361D5B1DB20026E6DC /* FriendsMsgTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsMsgTVC.swift; sourceTree = "<group>"; };
 		110D86E71D54878A00B4B352 /* Project16Netease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project16Netease.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +258,7 @@
 		11FC6A651D767CE8008D13B5 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		11FC6A661D767CE8008D13B5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		11FC6A671D767CE8008D13B5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		11FC6A711D76824B008D13B5 /* DiscoveryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,7 +345,7 @@
 		1108A32F1D5ACAA60026E6DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1108A3301D5ACAB90026E6DC /* DiscoveryTVC.swift */,
+				11FC6A711D76824B008D13B5 /* DiscoveryVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -995,6 +995,7 @@
 				112B91A41D644ED300DD12D5 /* UIScrollView+MJExtension.m in Sources */,
 				112733B81D6EF80100C9B0C0 /* ZBStatusTool.swift in Sources */,
 				112B919A1D644ED300DD12D5 /* MJRefreshAutoStateFooter.m in Sources */,
+				11FC6A721D76824B008D13B5 /* DiscoveryVC.swift in Sources */,
 				1148CA681D616778005233D3 /* SettingGroup.swift in Sources */,
 				110D86ED1D54878A00B4B352 /* NewFeatureViewController.swift in Sources */,
 				11EB72D51D757C7F000D9C9D /* ShopCarGoodsItem.swift in Sources */,
@@ -1015,7 +1016,6 @@
 				11EB72CE1D7577BA000D9C9D /* Reflect+Convert.swift in Sources */,
 				11D8E06B1D62B42700B664B6 /* GeneralSetTVC.swift in Sources */,
 				112B91941D644ED300DD12D5 /* MJRefreshBackFooter.m in Sources */,
-				1108A3311D5ACAB90026E6DC /* DiscoveryTVC.swift in Sources */,
 				1148CA6C1D616976005233D3 /* SettingArrowItem.swift in Sources */,
 				112733BE1D6EF80900C9B0C0 /* ZBStatus.swift in Sources */,
 				1148CA6A1D61687D005233D3 /* SettingItem.swift in Sources */,
