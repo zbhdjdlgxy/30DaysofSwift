@@ -47,7 +47,7 @@ class MainTabbarController: UITabBarController,ZBTabBarDelegate,ZBAddDelegate{
         self.setupChildViewController(homeTVC, title: "首页", imageName: "tabbar_home", selectedImageName: "tabbar_home_selected")
         
         // 2.消息
-        let messageTVC : MessageTVC = MessageTVC()
+        let messageTVC : MessageTVC = MessageTVC(style: .Grouped)
         self.setupChildViewController(messageTVC, title: "消息", imageName: "tabbar_message_center", selectedImageName: "tabbar_message_center_selected")
         
         // 3.广场

@@ -10,4 +10,6 @@
 #define Weibo_bridge_h
 //集成下拉和上拉刷新
 #import "MJRefresh.h"
+//网络指示器
+#import "MBProgressHUD+MJ.h"
 #endif /* Weibo_bridge_h */

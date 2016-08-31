@@ -19,13 +19,14 @@ final class ShopCarTool: NSObject {
      *  @param failure 请求失败后的回调
      */
     class func shopCarListWithParam(param : ShopCarListParam,success : (result : ShopCarListResult) -> Void,failure : (error : NSError) -> Void){
-        
+        MBProgressHUD.showMessage("加载中...")
         let dict = param.toDict()
         
         ZBHttpTool.getWithUrl(SERVER_HOST+KShoppingCarList, params: dict, success: { (id) in
-            
+            MBProgressHUD.hideHUD()
             success(result: ShopCarListResult.parse(dict: id as! NSDictionary))
             }) { (id) in
+                MBProgressHUD.hideHUD()
                 failure(error: id as! NSError)
         }
     }
