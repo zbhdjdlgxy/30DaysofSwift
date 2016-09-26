@@ -276,6 +276,7 @@
 		1103B0281D5DC7450082D4BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1107ABE61D5C55CE001339CA /* adIcon.jpg */,
 				1107ABEE1D5C7299001339CA /* AddFirstItems.plist */,
 				1103B01F1D5DA7A30082D4BD /* AddSecondItems.plist */,
 			);
@@ -809,7 +810,6 @@
 			isa = PBXGroup;
 			children = (
 				1103B0181D5D75BA0082D4BD /* ZBAdd.swift */,
-				1107ABE61D5C55CE001339CA /* adIcon.jpg */,
 				1107ABEC1D5C6D40001339CA /* AddItemCell.swift */,
 			);
 			name = Views;

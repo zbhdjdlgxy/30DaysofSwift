@@ -22,20 +22,16 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
     var delegate : ZBAddDelegate?
     
     
-    var firstContentArr : NSArray? //第一页列表
-    var secondContentArr : NSArray?//第二页列表
+    var contentArr : NSArray? //第一页列表
     
     override init(frame: CGRect) {
         
         super.init(frame: frame)
         self.setupData()
         self.firstCollectionView.registerClass(AddItemCell.self, forCellWithReuseIdentifier: "AddItemCell")
-        self.secondCollectionView.registerClass(AddItemCell.self, forCellWithReuseIdentifier: "AddItemCell")
-        self.secondCollectionView.hidden = true
         
         self.backgroundColor = UIColor.init(red: 246/255.0, green: 244/255.0, blue: 245/255.0, alpha: 0.95)
         self.addSubview(self.firstCollectionView)
-        self.addSubview(self.secondCollectionView)
         self.addSubview(self.dateLabel)
         self.addSubview(self.adImageView)
         self.addSubview(self.backBtn)
@@ -53,14 +49,11 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
     func setupData(){
         
         let path = NSBundle.mainBundle().pathForResource("AddFirstItems.plist", ofType: nil)
-        firstContentArr = NSArray(contentsOfFile: path!)
+        contentArr = NSArray(contentsOfFile: path!)
         firstCollectionView.reloadData()
-        
-        let path2 = NSBundle.mainBundle().pathForResource("AddSecondItems.plist", ofType: nil)
-        secondContentArr = NSArray(contentsOfFile: path2!)
-        secondCollectionView.reloadData()
+
     }
-    
+
     
     override func layoutSubviews() {
         
@@ -68,13 +61,7 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
         self.dateLabel.frame = CGRectMake(10, 100, SCREENW, 30)
         self.adImageView.frame = CGRectMake(SCREENW - 140 - 10, 66, 140, 140)
         
-        self.firstCollectionView.frame = CGRectMake(0, SCREENH, SCREENW, SCREENH - 300 - 49)
-        self.firstCollectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20)
-        
-        self.secondCollectionView.frame = CGRectMake(0, 300, SCREENW, SCREENH - 300 - 49)
-        self.secondCollectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20)
-        
-        
+        self.firstCollectionView.frame = CGRectMake(0, SCREENH, SCREENW, 0)
         self.exitBtn.frame = CGRectMake(0, SCREENH - 49, SCREENW, 49)
         self.backBtn.frame = CGRectMake(0, SCREENH - 49, SCREENW/2, 49)
         self.exitBtn2.frame = CGRectMake(SCREENW/2, SCREENH - 49, SCREENW/2, 49)
@@ -84,9 +71,9 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
             self.exitImgView.transform = CGAffineTransformMakeRotation((CGFloat)(M_PI/4))
         }
         self.exitImgView.transform = CGAffineTransformMakeRotation((CGFloat)(M_PI/4))
-        
+        let firstCollectionViewH = SCREENH * 0.4
         UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: .CurveLinear, animations: {
-        self.firstCollectionView.frame = CGRectMake(0, 300, SCREENW, SCREENH - 300 - 49)
+            self.firstCollectionView.frame = CGRectMake(0, SCREENH - firstCollectionViewH - 49, SCREENW, firstCollectionViewH)
         
         }, completion: nil)
         
@@ -100,20 +87,18 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
     
     func backAction() {
         self.firstCollectionView.hidden = false
-        self.secondCollectionView.hidden = true
         self.exitBtn2.hidden = true
         self.backBtn.hidden = true
         
         self.exitBtn.hidden = false
         self.exitImgView.hidden = false
-        self.firstCollectionView.layer.addAnimation(self.pushAnim(kCATransitionFromLeft), forKey: nil)
-
+        self.firstCollectionView.scrollToItemAtIndexPath(NSIndexPath.init(forRow: 0, inSection: 0), atScrollPosition: .Right, animated: true)
     }
     
 //    MARK: UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         
-        return 3
+        return 6
     }
  
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
@@ -122,9 +107,7 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
         var msgDic : NSDictionary = NSDictionary()
         
         if collectionView == firstCollectionView {
-            msgDic = firstContentArr?.objectAtIndex(indexPath.section * 3 + indexPath.row) as! NSDictionary
-        }else{
-            msgDic = secondContentArr?.objectAtIndex(indexPath.section * 3 + indexPath.row) as! NSDictionary
+            msgDic = contentArr?.objectAtIndex(indexPath.section * 6 + indexPath.row) as! NSDictionary
         }
         
         cell.textLabel.text = msgDic["title"] as? String
@@ -141,38 +124,21 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
 //    MARK: UICollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        if collectionView == firstCollectionView{
-            if indexPath.section == 1 && indexPath.row == 2 {
-                self.exitBtn2.hidden = false
-                self.backBtn.hidden = false
-                self.exitBtn.hidden = true
-                self.exitImgView.hidden = true
-                self.firstCollectionView.hidden = true
-                self.secondCollectionView.hidden = false
-                self.secondCollectionView.layer.addAnimation(self.pushAnim(kCATransitionFromRight), forKey: nil)
-                
-            }else{
-                let msgDic = firstContentArr?.objectAtIndex(indexPath.section * 3 + indexPath.row) as! NSDictionary
-                self.delegate?.zBAdd(selectIndex: indexPath, title: msgDic["title"] as! String)
-            }
+        if indexPath.section == 0 && indexPath.row == 5 {
+            self.exitBtn2.hidden = false
+            self.backBtn.hidden = false
+            self.exitBtn.hidden = true
+            self.exitImgView.hidden = true
+            let index : NSIndexPath = NSIndexPath.init(forRow: 5, inSection: 1)
+            collectionView.scrollToItemAtIndexPath(index, atScrollPosition: .Left, animated: true)
             
         }else{
-            let msgDic = secondContentArr?.objectAtIndex(indexPath.section * 3 + indexPath.row) as! NSDictionary
+            let msgDic = contentArr?.objectAtIndex(indexPath.section * 6 + indexPath.row) as! NSDictionary
             self.delegate?.zBAdd(selectIndex: indexPath, title: msgDic["title"] as! String)
         }
         
     }
-    
-    //转场动画
-    
-    func pushAnim(direction : String) -> CATransition {
-        let anim : CATransition = CATransition.init()
-        anim.type = kCATransitionPush
-        anim.subtype = direction
-        anim.duration = 0.6
-        anim.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
-        return anim
-    }
+
     
 //    MARK: lazy
     
@@ -229,28 +195,28 @@ final class ZBAdd: UIView,UICollectionViewDelegate,UICollectionViewDataSource {
         return image
     }()
     
+    let cellW = SCREENW * 0.21
+    
+    
     lazy var firstCollectionView : UICollectionView = {
         var layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .Horizontal
+        
         let collect : UICollectionView = UICollectionView.init(frame: CGRectZero, collectionViewLayout: layout)
         collect.delegate = self
         collect.dataSource = self
         collect.backgroundColor = UIColor.clearColor()
-        layout.itemSize = CGSizeMake((ZBAdd.screenW - 4 * 40) / 3, (ZBAdd.screenW - 4 * 40) / 3 + 40)
-        layout.minimumLineSpacing = 40
-        layout.minimumInteritemSpacing = 30
+        collect.pagingEnabled = true
+        collect.showsVerticalScrollIndicator = false
+        collect.showsHorizontalScrollIndicator = false
+        layout.itemSize = CGSizeMake(self.cellW, self.cellW + 40)
+        let mm = (SCREENW - 3 * self.cellW) / 4
+        layout.headerReferenceSize = CGSizeMake(mm, 0);
+        layout.footerReferenceSize = CGSizeMake(mm, 0);
+        layout.minimumLineSpacing = mm
+        layout.minimumInteritemSpacing = 0
+        
         return collect
     }()
-    
-    lazy var secondCollectionView : UICollectionView = {
-        var layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let collect : UICollectionView = UICollectionView.init(frame: CGRectZero, collectionViewLayout: layout)
-        collect.delegate = self
-        collect.dataSource = self
-        collect.backgroundColor = UIColor.clearColor()
-        layout.itemSize = CGSizeMake((ZBAdd.screenW - 4 * 40) / 3, (ZBAdd.screenW - 4 * 40) / 3 + 40)
-        layout.minimumLineSpacing = 40
-        layout.minimumInteritemSpacing = 30
-        return collect
-    }()
-    
+
 }
